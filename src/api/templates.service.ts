@@ -8,12 +8,12 @@ import {HttpClient} from '@angular/common/http'
 export class TemplatesService {
   baseUrl: string
 
-  constructor(util: UtilService, private http: HttpClient) {
-    this.baseUrl = `${util.backEnd}/api/templates/`
+  constructor(private util: UtilService, private http: HttpClient) {
+    this.baseUrl = `${util.backEnd}/api/templates`
   }
 
   fetch() {
-    return this.http.get(this.baseUrl)
+    return this.http.get(this.baseUrl).toPromise() as Promise<Template[]>
     // console.log(`\nRemoving ${templates.data.length} templates...`);
     //
     // templates.data.forEach(async template => {
@@ -30,6 +30,13 @@ export class TemplatesService {
   }
 
   delete(id: number) {
-    return this.http.delete(this.baseUrl + id)
+    return this.http.delete(`${this.baseUrl}/${id}`).toPromise()
   }
+}
+
+export interface Template {
+  Id: number,
+  type: 1|2|3,
+  title: string
+  description: string
 }

@@ -1,18 +1,20 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpErrorResponse} from '@angular/common/http'
 import {UtilService} from './util.service'
+import {CookieStorage} from 'ngx-store'
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
-  jwtToken ?: string
+  @CookieStorage()
+  jwtToken = ''
 
   constructor(private http: HttpClient, private util: UtilService) {
   }
 
   async login(username: string, password: string) {
-    this.jwtToken = null
+    this.logout()
     try {
       const res = await this.http.post(`${this.util.backEnd}/api/auth`, {
         username: username,
@@ -29,6 +31,10 @@ export class LoginService {
       console.error('login failed:%o', err)
       return Promise.reject('login failed!' + msg)
     }
+  }
+
+  logout() {
+    this.jwtToken = ''
   }
 }
 

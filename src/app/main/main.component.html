@@ -1,3 +1,21 @@
-<p>
-  main works!
-</p>
+<div nz-row [nzGutter]="10">
+  <div nz-col="" [nzSpan]="20">
+    <input placeholder="search" [(ngModel)]="query" nz-input="">
+  </div>
+  <div nz-col="" [nzSpan]="4">
+    <button nz-button="" (click)="exportAll()" [nzType]="'primary'">Export</button>
+  </div>
+</div>
+<nz-table [nzData]="allData">
+  <tbody>
+  <tr *ngFor="let item of list()">
+    <td>
+      <div><h2>{{item.title}}</h2></div>
+      <div>{{item.description}}</div>
+    </td>
+    <td>
+      <a nz-popconfirm nzTitle="Are you sure to delete" (nzOnConfirm)="deleteItem(item.Id)">Delete</a>
+    </td>
+  </tr>
+  </tbody>
+</nz-table>

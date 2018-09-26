@@ -3659,9 +3659,25 @@ lodash.debounce@^4.0.8:
   version "4.0.8"
   resolved "http://registry.npm.taobao.org/lodash.debounce/download/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
 
+lodash.get@^4.4.2:
+  version "4.4.2"
+  resolved "http://registry.npm.taobao.org/lodash.get/download/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
+
+lodash.isequal@^4.5.0:
+  version "4.5.0"
+  resolved "http://registry.npm.taobao.org/lodash.isequal/download/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
+
+lodash.merge@^4.6.1:
+  version "4.6.1"
+  resolved "http://registry.npm.taobao.org/lodash.merge/download/lodash.merge-4.6.1.tgz#adc25d9cb99b9391c59624f379fbba60d7111d54"
+
 lodash.mergewith@^4.6.0:
   version "4.6.1"
   resolved "http://registry.npm.taobao.org/lodash.mergewith/download/lodash.mergewith-4.6.1.tgz#639057e726c3afbdb3e7d42741caa8d6e4335927"
+
+lodash.set@^4.3.2:
+  version "4.3.2"
+  resolved "http://registry.npm.taobao.org/lodash.set/download/lodash.set-4.3.2.tgz#d8757b1da807dde24816b0d6a84bea1a76230b23"
 
 lodash.tail@^4.1.1:
   version "4.1.1"
@@ -4019,6 +4035,17 @@ ng-zorro-antd@^1.6.0:
   dependencies:
     "@angular/cdk" "^6.0.0"
     date-fns "^1.29.0"
+    tslib "^1.9.0"
+
+ngx-store@^2.0.0:
+  version "2.0.0"
+  resolved "http://registry.npm.taobao.org/ngx-store/download/ngx-store-2.0.0.tgz#29b7b4ae3a926191c25cf4ade930b192be5af2f5"
+  dependencies:
+    lodash.get "^4.4.2"
+    lodash.isequal "^4.5.0"
+    lodash.merge "^4.6.1"
+    lodash.set "^4.3.2"
+    ts-debug "^1.1.2"
     tslib "^1.9.0"
 
 nice-try@^1.0.4:
@@ -5884,6 +5911,10 @@ trim-right@^1.0.1:
   resolved "http://registry.npm.taobao.org/true-case-path/download/true-case-path-1.0.3.tgz#f813b5a8c86b40da59606722b144e3225799f47d"
   dependencies:
     glob "^7.1.2"
+
+ts-debug@^1.1.2:
+  version "1.2.0"
+  resolved "http://registry.npm.taobao.org/ts-debug/download/ts-debug-1.2.0.tgz#b6adf9c9b72071557f3078748dcedd1801f4c1de"
 
 ts-node@~7.0.0:
   version "7.0.1"

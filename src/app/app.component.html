@@ -1,1 +1,9 @@
+<div nz-row class="top">
+  <div nz-col="" [nzSpan]="6">
+    <h1>{{title}}</h1>
+  </div>
+  <div nz-col="" [nzSpan]="18" class="top-right">
+    <button nz-button="" (click)="logout()" *ngIf="isLoggedIn()">Logout</button>
+  </div>
+</div>
 <router-outlet></router-outlet>

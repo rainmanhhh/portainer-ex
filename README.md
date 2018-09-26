@@ -38,4 +38,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     }
 
     ```
-1. open `http://localhost/pe/` to use Portainer-Ex (assume your nginx is listening at localhost:80)
+1. open `http://192.168.1.123/pe/` to use Portainer-Ex (assume your nginx is listening at 192.168.1.123:80)

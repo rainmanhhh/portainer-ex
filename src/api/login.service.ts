@@ -19,10 +19,6 @@ export class LoginService {
       const res = await this.http.post(`${this.util.backEnd}/api/auth`, {
         username: username,
         password: password
-      }, {
-        // headers: new HttpHeaders().set(
-        //   'Content-Type', 'application/x-www-form-urlencoded'
-        // )
       }).toPromise() as LoginRes
       this.jwtToken = res.jwt
     } catch (err) {

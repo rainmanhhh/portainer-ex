@@ -5,10 +5,12 @@ import {MainComponent} from './main/main.component'
 import {HashLocationStrategy, LocationStrategy} from '@angular/common'
 import {AppRouteGuard} from './app-route-guard'
 import {NotFoundComponent} from './not-found/not-found.component'
+import {SaveComponent} from './save/save.component'
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'main', component: MainComponent, canActivate: [AppRouteGuard]},
+  {path: 'save', component: SaveComponent, canActivate: [AppRouteGuard]},
   {path: '', pathMatch: 'full', redirectTo: 'main'},
   {path: '**', component: NotFoundComponent}
 ];

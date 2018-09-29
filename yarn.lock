@@ -302,6 +302,10 @@
   dependencies:
     "@types/jasmine" "*"
 
+"@types/js-base64@^2.3.1":
+  version "2.3.1"
+  resolved "http://registry.npm.taobao.org/@types/js-base64/download/@types/js-base64-2.3.1.tgz#c39f14f129408a3d96a1105a650d8b2b6eeb4168"
+
 "@types/node@^6.0.46":
   version "6.0.117"
   resolved "http://registry.npm.taobao.org/@types/node/download/@types/node-6.0.117.tgz#ccfc2506001404708528d657aad9c1b931111646"
@@ -3380,7 +3384,7 @@ jasminewd2@^2.1.0:
   version "2.2.0"
   resolved "http://registry.npm.taobao.org/jasminewd2/download/jasminewd2-2.2.0.tgz#e37cf0b17f199cce23bea71b2039395246b4ec4e"
 
-js-base64@^2.1.8:
+js-base64@^2.1.8, js-base64@^2.4.9:
   version "2.4.9"
   resolved "http://registry.npm.taobao.org/js-base64/download/js-base64-2.4.9.tgz#748911fb04f48a60c4771b375cac45a80df11c03"
 

@@ -1,0 +1,13 @@
+<div>
+  <div *ngIf="data">
+    <a nz-button=""
+       download="templates.json"
+       [href]="encodeData"
+       (click)="back()"
+       [nzType]="'primary'">Save Data</a>
+    <div>
+      {{data}}
+    </div>
+  </div>
+  <h2 *ngIf="!data">No data to save</h2>
+</div>

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Template, TemplatesService} from '../../api/templates.service'
+import {SaveStore} from '../save/save-store'
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-main',
@@ -11,7 +13,9 @@ export class MainComponent implements OnInit {
   query = ''
 
   constructor(
-    private templatesService: TemplatesService
+    private templatesService: TemplatesService,
+    private saveStore: SaveStore,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -35,9 +39,10 @@ export class MainComponent implements OnInit {
     this.ngOnInit()
   }
 
-  exportAll() {
-    const w = window.open('', '_blank')
-    w.document.write(JSON.stringify(this.list()))
+  exportData() {
+    const l = this.list()
+    this.saveStore.data = l.length > 0 ? JSON.stringify(l) : null
+    this.router.navigate(['save'])
   }
 }
 
